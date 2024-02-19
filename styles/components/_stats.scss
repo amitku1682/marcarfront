@@ -1,0 +1,12 @@
+//
+// Stats
+//
+.stats-card{
+    width: unset;
+}
+
+@media (max-width: 425px) {
+    .stats-card{
+        width: 100%;
+    }
+}
