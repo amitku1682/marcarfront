@@ -5,11 +5,13 @@ import SubHeader, { SubHeaderLeft, SubheaderSeparator } from '@/layout/SubHeader
 import Page from '@/layout/Page/Page';
 import dayjs from 'dayjs';
 import Swal from 'sweetalert2';
+import { GetServerSideProps } from 'next';
+
 
 const ProfileImageUpload: React.FC = ({ id }) => {
   const [photo, setPhoto] = useState(null);
   const [fileUrl, setFileUrl] = useState('');
-
+// console.log("userid",id)
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     setPhoto(selectedFile);
@@ -115,6 +117,14 @@ const ProfileImageUpload: React.FC = ({ id }) => {
       </Page>
     </PageWrapper>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  return {
+    props: {
+      id: query.id
+    }
+  };
 };
 
 export default ProfileImageUpload;

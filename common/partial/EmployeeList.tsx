@@ -249,7 +249,7 @@ const EmployeeList: FC = () => {
                <td>
     {/* Perform a null/undefined check for userDetails before accessing profile_image */}
     <td>
-  <img
+  <img 
     src={employee.userDetails?.profileImage || "/profile.png"}
     alt="Profile"
     width="50"
