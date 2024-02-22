@@ -8,7 +8,7 @@ import axios from 'axios';
 import ENDPOINTS from '@/core/endpoints';
 import api from '@/core/api';
 import Link from 'next/link';
-import { CSVLink } from 'react-csv'; // Import CSVLink
+import { CSVLink } from 'react-csv'  // Import CSVLink
 import Button from '@/components/bootstrap/Button';
 
 interface ILocation {
@@ -94,7 +94,7 @@ const LocationList: FC = () => {
   }, []);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [perPage, setPerPage] = useState(PER_COUNT['3']);
+  const [perPage, setPerPage] = useState(PER_COUNT['10']);
   const { items, requestSort, getClassNamesFor } = useSortableData(locations);
 
   // Filter items based on search term
